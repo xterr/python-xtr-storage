@@ -298,6 +298,9 @@ backwards, what removing it undoes.
 
 - **Install** — `uv add "xtr-storage[di]"`; add `s3` or `gcs` for the object
   stores you reach.
+- **Recipe** — `uv run xtr-recipes recipes:sync` does the *Activate* and *Ignore*
+  steps below: it lists `StorageBundle` and ignores `/var/storage/`. There is no
+  config file or environment to write.
 - **Activate** — `StorageBundle: {"all": True}` in `BUNDLES` in
   `<app>/bundles.py`, imported from `xtr_storage.bundle`.
 - **Brings along** — nothing; the bundle requires no other.
